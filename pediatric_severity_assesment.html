@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSR - Wheater VS Cases</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="brand">
+            <h1>Hospital santa rosa</h1>
+        </div>
+        <div class="info">
+            <h3>Dengue prediction and prevention program</h3>
+        </div>
+    </nav>
+    <div class="content">
+        <section>
+            <form id="severity_assessment" action="">
+                <div>
+                    <h3>Rellene el siguiente formulario</h3>
+                </div>
+                <!-- Edad -->
+                <div class="">
+                    <label for="">Edad</label>
+                    <div>
+                        <input data-info="clasificacion" required name="edad" class="form-control" type="number">
+                    </div>
+                </div>
+                <!-- Genero -->
+                <div class="">
+                    <label for="">Genero</label>
+                    <div>
+                        <select data-info="clasificacion" name="genero">
+                            <option value="1">Masculino</option>
+                            <option value="0">Femenino</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <!-- Duración de la fiebre? -->
+                    <div class="">
+                        <label for="">Duración de la fiebre</label>
+                        <div>
+                            <input required class="form-control" name="duracion_fiebre" type="number">
+                        </div>
+                    </div>
+                    <!-- Hemoglobina -->
+                    <div class="">
+                        <label for="">Hemoglobina</label>
+                        <div>
+                            <input required class="form-control" name="hemoglobina" type="number">
+                        </div>
+                    </div>
+                    <!-- Hematocritos -->
+                    <div class="">
+                        <label for="">Hematocritos</label>
+                        <div>
+                            <input required class="form-control" name="hematocritos" type="number">
+                        </div>
+                    </div>
+                    <!-- Globulos blancos -->
+                    <div class="">
+                        <label for="">Globulos blancos</label>
+                        <div>
+                            <input required class="form-control" name="globulos_blancos" type="number">
+                        </div>
+                    </div>
+                    <!-- Plaquetas -->
+                    <div class="">
+                        <label for="">Plaquetas</label>
+                        <div>
+                            <input required class="form-control" name="plaquetas" type="number">
+                        </div>
+                    </div>
+                    <!-- ALT -->
+                    <div class="">
+                        <label for="">ALT</label>
+                        <div>
+                            <input required class="form-control" name="alt" type="number">
+                        </div>
+                    </div>
+                    <!-- Creatinina -->
+                    <div class="">
+                        <label for="">Creatinina</label>
+                        <div>
+                            <input required class="form-control" name="creatinina" type="number">
+                        </div>
+                    </div>
+                    <div>
+                        <p>Sintomatologia</p>
+                    </div>
+                    <!-- Creatinina -->
+                    <div class="">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="text-align: left;">Sintoma</th>
+                                    <th style="text-align: center;">SI</th>
+                                    <th style="text-align: center;">NO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <p>Dolores de cabeza</p>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="cefalea" value="1">
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="cefalea" value="0">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Mialgia</p>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="mialgia" value="1">
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="mialgia" value="0">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Dolor abdominal</p>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="dolor_abdominal" value="1">
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="dolor_abdominal" value="0">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Erupciones</p>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="erupciones" value="1">
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="erupciones" value="0">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Vomitos</p>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="vomitos" value="1">
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="vomitos" value="0">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Dificultad al respirar</p>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="dificultad_respirar" value="1">
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="dificultad_respirar" value="0">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Hemorragia</p>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="hemorragia" value="1">
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="hemorragia" value="0">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>Organomegalia</p>
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="organomegalia" value="1">
+                                    </td>
+                                    <td style="text-align: center;">
+                                        <input data-info="clasificacion" type="radio" name="organomegalia" value="0">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="formInteractions">
+                    <button type="button">Cancelar</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    
+        <section id="secPredicciones">
+            <div>
+                <h3>PREDICCIONES</h3>
+                <div>
+                    <table>
+                        <colgroup>
+                            <col>
+                            <col style="text-align: center;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Nro Casos</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyPredicciones">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+    const form = document.getElementById('severity_assessment')
+
+    function handleFormSubmit(ev){
+        ev.preventDefault();
+        const formData = new FormData(form);
+        let data = {};
+        for (const entry of formData) {
+            data[entry[0]] = entry[1];
+        }
+        console.log(data)
+
+        makeApiRequest(data)
+            .then(response => {
+                // Handle the response data
+                console.log('respuesta API: ', response);
+                alert(response.prediction);
+                // showResponses(fechas, response.predictions);
+            })
+            .catch(error => {
+                // Handle any errors
+                console.error('Error:', error);
+            });
+    }
+
+    async function makeApiRequest(data){
+        try {
+            const response = await fetch('http://127.0.0.1:5000/assess-severity', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            return result;
+        } catch (error) {
+            console.error('Error:', error);
+            throw error;
+        }
+    }
+
+    function showResponses(fechas, respuesta){
+        const secPredicciones =  document.querySelector('#secPredicciones')
+        const tblBody = document.querySelector('#tbodyPredicciones')
+
+        for(let i = 0; i<fechas.length; i++){
+            let fecha = fechas[i];
+            let totalCasos = respuesta[i];
+            const n_row = document.createElement('tr');
+            const fecha_td = document.createElement('td');
+            const totalCasos_td = document.createElement('td');
+
+            fecha_td.textContent = fecha;
+
+            totalCasos_td.textContent = Math.round(totalCasos);
+            totalCasos_td.align = "center"
+
+            n_row.append(fecha_td,totalCasos_td);
+            tblBody.append(n_row);
+        }
+    }
+    
+    form.onsubmit=handleFormSubmit
+</script>
+</html>
