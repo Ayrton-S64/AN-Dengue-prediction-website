@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSR - Wheater VS Cases</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="brand">
+            <h1>Hospital santa rosa</h1>
+        </div>
+        <div class="info">
+            <h3>Dengue prediction and prevention program</h3>
+        </div>
+    </nav>
+    <div class="content">
+        <section>
+            <div>
+                <h2>Rellene el siguiente formulario</h2>
+            </div>
+            <form id="form_symptoms" action="">
+                <div id="symptoms">
+                    <div>
+                        <div>
+                            <h5>Signos y síntomas generales:</h5>
+                        </div>
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Sí</th>
+                                        <th>No</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Fiebre repentina</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_fiebre" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_fiebre" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dolor de cabeza</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_cabeza" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_cabeza" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Vómitos</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_vomitos" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_vomitos" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Diarrea</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_diarrea" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_diarrea" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Náuseas</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_nauseas" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_nauseas" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Fatiga</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_fatiga" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_fatiga" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Debilidad</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_debilidad" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_debilidad" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Escalofríos</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_escalofrios" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_escalofrios" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dolor muscular</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_muscular" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_muscular" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Mialgia</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_mialgia" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_mialgia" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dolor en las articulaciones</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_articulaciones" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_articulaciones" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Hinchazón</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_hinchazon" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_hinchazon" value="0">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+                    <div>
+                        <div>
+                            <h5>Manifestaciones de sangrado:</h5>
+                        </div>
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Sí</th>
+                                        <th>No</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Sangrado en la boca</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_sangrado_boca" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_sangrado_boca" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Sangrado nasal</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_sangrado_nasal" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_sangrado_nasal" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Hemorragia gastrointestinal</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_hemorragia_gastrointestinal" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_hemorragia_gastrointestinal" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Sangrado de encías</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_sangrado_encias" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_sangrado_encias" value="0">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+                    <div>
+                        <div>
+                            <h5>Señales de alarma:</h5>
+                        </div>
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Sí</th>
+                                        <th>No</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Pérdida de apetito</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_perdida_apetito" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_perdida_apetito" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Pérdida de peso</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_perdida_peso" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_perdida_peso" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Pérdida de orina</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_perdida_orina" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_perdida_orina" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dolor abdominal</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_abdominal" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_abdominal" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dolor de estómago</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_estomago" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_estomago" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dolor orbital (alrededor de los ojos)</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_orbital" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_orbital" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dolor de cuello</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_cuello" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_cuello" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dolor de espalda</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_espalda" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_espalda" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dolor en los dedos del pie</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_dedos_pie" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_dedos_pie" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dolor en los dedos de las manos</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_dedos_manos" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dolor_dedos_manos" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Derrame pleural</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_derrame_pleural" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_derrame_pleural" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Ascitis</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ascitis" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ascitis" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Hipoglucemia</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_hipoglucemia" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_hipoglucemia" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Postraccion</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_postraccion" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_postraccion" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Fiebre alta</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_fiebre_alta" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_fiebre_alta" value="0">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+                    <div>
+                        <div>
+                            <h5>Signos de choque:</h5>
+                        </div>
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Sí</th>
+                                        <th>No</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Hipotensión (presión arterial baja)</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_hipotension" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_hipotension" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Confusión</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_confusion" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_confusion" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Mareo</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_mareo" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_mareo" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Parálisis</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_paralisis" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_paralisis" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Ritmo cardíaco lento</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ritmo_cardiaco_lento" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ritmo_cardiaco_lento" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Respiración restringida</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_respiracion_restringida" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_respiracion_restringida" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Rigidez</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_rigidez" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_rigidez" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Rigidez de cuello</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_rigidez_cuello" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_rigidez_cuello" value="0">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+                    <div>
+                        <div>
+                            <h5>Manifestaciones cutáneas:</h5>
+                        </div>
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Sí</th>
+                                        <th>No</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Erupción cutánea</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_erupcion_cutanea" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_erupcion_cutanea" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Lesiones en la piel</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_lesiones_piel" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_lesiones_piel" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Picazón</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_picazon" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_picazon" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Irritacion labios</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_irritacion_labios" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_irritacion_labios" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Úlceras</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ulceras" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ulceras" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Piel Amarilla</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_piel_amarilla" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_piel_amarilla" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Ojos Amarilla</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ojos_amarilla" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ojos_amarilla" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Ictericia (piel y ojos amarillos)</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ictericia" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ictericia" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Inflamación</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_inflamacion" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_inflamacion" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Ojos rojos</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ojos_rojos" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_ojos_rojos" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Erupción en forma de diana<br>(Eritema multiforme)</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_eritema_multiforme" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_eritema_multiforme" value="0">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- -------------------------- -->
+                    <div>
+                        <div>
+                            <h5>Otros síntomas:</h5>
+                        </div>
+                        <div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Sí</th>
+                                        <th>No</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Coma</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_coma" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_coma" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Dificultad para hablar</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dificultad_hablar" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_dificultad_hablar" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Distorsión facial</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_distorsion_facial" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_distorsion_facial" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Temblores</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_temblores" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_temblores" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Microcefalia (cabeza más pequeña de lo normal)</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_microcefalia" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_microcefalia" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Irritabilidad</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_irritabilidad" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_irritabilidad" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Convulsiones</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_convulsiones" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_convulsiones" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Boca amarga (sabor amargo en la lengua)</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_boca_amarga" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_boca_amarga" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Orina con aspecto de cola de cola (oscura como la Coca-Cola)</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_orina_cola_cola" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_orina_cola_cola" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Anemia</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_anemia" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_anemia" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Sensibilidad a la luz</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_sensibilidad_luz" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_sensibilidad_luz" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Problemas disgestivos</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_problemas_digestivos" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_problemas_digestivos" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Ganglios linfaticos inflamados</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_glangios_linfaticos_inflamados" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_glangios_linfaticos_inflamados" value="0">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Perdidas uñas del pie</p>
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_perdidas_unias_pie" value="1">
+                                        </td>
+                                        <td style="text-align: center;">
+                                            <input type="radio" name="sintoma_perdidas_unias_pie" value="0">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="formInteractions">
+                    <button type="button">Cancelar</button>
+                    <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+<script>
+    const form = document.getElementById('form_symptoms')
+
+    function handleFormSubmit(ev){
+        ev.preventDefault();
+        const formData = new FormData(form);
+        let data = {};
+        for (const entry of formData) {
+            data[entry[0]] = entry[1];
+        }
+        console.log(data)
+
+        // makeApiRequest(data)
+        //     .then(response => {
+        //         // Handle the response data
+        //         console.log('respuesta API: ', response);
+        //         alert(response.prediction);
+        //         // showResponses(fechas, response.predictions);
+        //     })
+        //     .catch(error => {
+        //         // Handle any errors
+        //         console.error('Error:', error);
+        //     });
+    }
+
+    async function makeApiRequest(data){
+        try {
+            const response = await fetch('http://127.0.0.1:5000/illness-prediction', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const result = await response.json();
+            return result;
+        } catch (error) {
+            console.error('Error:', error);
+            throw error;
+        }
+    }
+
+    function showResponses(fechas, respuesta){
+        const secPredicciones =  document.querySelector('#secPredicciones')
+        const tblBody = document.querySelector('#tbodyPredicciones')
+
+        for(let i = 0; i<fechas.length; i++){
+            let fecha = fechas[i];
+            let totalCasos = respuesta[i];
+            const n_row = document.createElement('tr');
+            const fecha_td = document.createElement('td');
+            const totalCasos_td = document.createElement('td');
+
+            fecha_td.textContent = fecha;
+
+            totalCasos_td.textContent = Math.round(totalCasos);
+            totalCasos_td.align = "center"
+
+            n_row.append(fecha_td,totalCasos_td);
+            tblBody.append(n_row);
+        }
+    }
+    
+    form.onsubmit=handleFormSubmit
+</script>
+</html>
