@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>HSR - Wheater VS Cases</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/weather-cases.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <script src="https://kit.fontawesome.com/f2d5daf803.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <nav>
-        <div class="brand">
-            <h1>Hospital santa rosa</h1>
+    <div class="header">
+
+        <!--Content before waves-->
+        <div class="inner-header flex">
+        <!--Just the logo.. Don't mind this-->
+       <img style="width: 50px; height: 80px;"  src="recursos/1x/Recurso 1.png" alt="">
+        <h1 style="text-align: center;">HOSPITAL SANTA ROSA</h1>
         </div>
-        <div class="info">
-            <h3>Dengue prediction and prevention program</h3>
+        
+        <!--Waves Container-->
+        <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+        </svg>
         </div>
-    </nav>
+        <!--Waves end-->
+        
+    </div>
     <div class="content">
         <section>
             <div>
@@ -24,7 +46,7 @@
             </div>
             <form id="form_symptoms" action="">
                 <div id="symptoms">
-                    <div>
+                    <div class="alert alert-warning col-4 " role="alert">
                         <div>
                             <h5>Signos y síntomas generales:</h5>
                         </div>
@@ -175,7 +197,7 @@
                         </div>
                     </div>
                     <!-- -------------------------- -->
-                    <div>
+                    <div class="alert alert-warning" role="alert">
                         <div>
                             <h5>Manifestaciones de sangrado:</h5>
                         </div>
@@ -238,7 +260,7 @@
                         </div>
                     </div>
                     <!-- -------------------------- -->
-                    <div>
+                    <div class="alert alert-warning" role="alert">
                         <div>
                             <h5>Señales de alarma:</h5>
                         </div>
@@ -422,7 +444,7 @@
                         </div>
                     </div>
                     <!-- -------------------------- -->
-                    <div>
+                    <div class="alert alert-warning" role="alert">
                         <div>
                             <h5>Signos de choque:</h5>
                         </div>
@@ -529,7 +551,7 @@
                         </div>
                     </div>
                     <!-- -------------------------- -->
-                    <div>
+                    <div class="alert alert-warning" role="alert">
                         <div>
                             <h5>Manifestaciones cutáneas:</h5>
                         </div>
@@ -669,7 +691,7 @@
                         </div>
                     </div>
                     <!-- -------------------------- -->
-                    <div>
+                    <div class="alert alert-warning" role="alert">
                         <div>
                             <h5>Otros síntomas:</h5>
                         </div>
@@ -842,7 +864,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="formInteractions">
+                <div id="formInteractions" style="padding-bottom: 40px;;">
                     <button type="button">Cancelar</button>
                     <button type="submit">Enviar</button>
                 </div>
