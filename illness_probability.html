@@ -862,17 +862,17 @@
         }
         console.log(data)
 
-        // makeApiRequest(data)
-        //     .then(response => {
-        //         // Handle the response data
-        //         console.log('respuesta API: ', response);
-        //         alert(response.prediction);
-        //         // showResponses(fechas, response.predictions);
-        //     })
-        //     .catch(error => {
-        //         // Handle any errors
-        //         console.error('Error:', error);
-        //     });
+        makeApiRequest(data)
+            .then(response => {
+                // Handle the response data
+                console.log('respuesta API: ', response);
+                // alert(response.prediction); // aqui se muestra el modal
+                // showResponses(fechas, response.predictions);
+            })
+            .catch(error => {
+                // Handle any errors
+                console.error('Error:', error);
+            });
     }
 
     async function makeApiRequest(data){
@@ -894,27 +894,6 @@
         } catch (error) {
             console.error('Error:', error);
             throw error;
-        }
-    }
-
-    function showResponses(fechas, respuesta){
-        const secPredicciones =  document.querySelector('#secPredicciones')
-        const tblBody = document.querySelector('#tbodyPredicciones')
-
-        for(let i = 0; i<fechas.length; i++){
-            let fecha = fechas[i];
-            let totalCasos = respuesta[i];
-            const n_row = document.createElement('tr');
-            const fecha_td = document.createElement('td');
-            const totalCasos_td = document.createElement('td');
-
-            fecha_td.textContent = fecha;
-
-            totalCasos_td.textContent = Math.round(totalCasos);
-            totalCasos_td.align = "center"
-
-            n_row.append(fecha_td,totalCasos_td);
-            tblBody.append(n_row);
         }
     }
     
