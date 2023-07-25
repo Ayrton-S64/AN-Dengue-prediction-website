@@ -4,90 +4,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <title>HSR - Wheater VS Cases</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/weather-cases.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <script src="https://kit.fontawesome.com/f2d5daf803.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    <nav>
-        <div class="brand">
-            <h1>Hospital santa rosa</h1>
+    <div class="header">
+
+        <!--Content before waves-->
+        <div class="inner-header flex">
+        <!--Just the logo.. Don't mind this-->
+       <img style="width: 50px; height: 80px;"  src="recursos/1x/Recurso 1.png" alt="">
+        <h1 style="text-align: center;">HOSPITAL SANTA ROSA</h1>
         </div>
-        <div class="info">
-            <h3>Dengue prediction and prevention program</h3>
+        
+        <!--Waves Container-->
+        <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        </g>
+        </svg>
         </div>
-    </nav>
+        <!--Waves end-->
+        
+    </div>
+
     <div class="content">
         <section>
             <form id="dengueCasesPredictionForm" action="">
-                <div>
-                    <h3>Ingrese los datos de las fechas en las que se desean prediccion de casos</h3>
+                <div class="row justify-content-center align-items-center" >
+                    <div class="col-10">
+                        <h1>Ingrese los datos de las fechas en las que se desean prediccion de casos</h1>
+                    </div>
                 </div>
-                <div id="data-container">
-                    <div class="data-row">
-                        <!-- Fecha? -->
-                        <div class="">
-                            <label for="">Fecha</label>
-                            <div>
-                                <input required class="form-control" type="date">
-                            </div>
-                        </div>
-                        <!-- porcentaje de humedad? -->
-                        <div>
-                            <label for="">Porcentaje de humedad(%)</label>
-                            <div>
-                                <input required class="form-control" type="number">
-                            </div>
-                        </div>
-                        <!-- Temperatura promedio? -->
-                        <div>
-                            <label for="">Temperatura promedio(C°)</label>
-                            <div>
-                                <input required class="form-control" type="number">
-                            </div>
-                        </div>
-                        <!-- Temperatura maxima? -->
-                        <div>
-                            <label for="">Temperatura maxima(C°)</label>
-                            <div>
-                                <input required class="form-control" type="number">
-                            </div>
-                        </div>
-                        <!-- Temperatura minima? -->
-                        <div>
-                            <label for="">Temperatura minima(C°)</label>
-                            <div>
-                                <input required class="form-control" type="number">
-                            </div>
-                        </div>
-                        <!-- Precipitacion? -->
-                        <div>
-                            <label for="">Precipitacion(mm)</label>
-                            <div>
-                                <input required class="form-control" type="number">
-                            </div>
-                        </div>
-                        <!-- Actions? -->
-                        <div>
-                            <button onclick="deleteRow(event)">X</button>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-3">
+                        <div id="add-row">
+                            <button type="button" onclick="addRow(event)"><i class="fa-solid fa-plus" style="color: #ffffff;"></i>
+                                Agregar Datos
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div id="add-row">
-                    <button type="button" onclick="addRow(event)">
-                        Agregar data
-                    </button>
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-12">
+                        <div id="data-container">
+                            <div class="data-row">
+                                <!-- Fecha? -->
+                                <div class="">
+                                    <label for="">Fecha</label>
+                                    <div>
+                                        <input required class="form-control" type="date">
+                                    </div>
+                                </div>
+                                <!-- porcentaje de humedad? -->
+                                <div>
+                                    <label for="">Porcentaje de humedad(%)</label>
+                                    <div>
+                                        <input required class="form-control" type="number">
+                                    </div>
+                                </div>
+                                <!-- Temperatura promedio? -->
+                                <div>
+                                    <label for="">Temperatura promedio(C°)</label>
+                                    <div>
+                                        <input required class="form-control" type="number">
+                                    </div>
+                                </div>
+                                <!-- Temperatura maxima? -->
+                                <div>
+                                    <label for="">Temperatura maxima(C°)</label>
+                                    <div>
+                                        <input required class="form-control" type="number">
+                                    </div>
+                                </div>
+                                <!-- Temperatura minima? -->
+                                <div>
+                                    <label for="">Temperatura minima(C°)</label>
+                                    <div>
+                                        <input required class="form-control" type="number">
+                                    </div>
+                                </div>
+                                <!-- Precipitacion? -->
+                                <div>
+                                    <label for="">Precipitacion(mm)</label>
+                                    <div>
+                                        <input required class="form-control" type="number">
+                                    </div>
+                                </div>
+                                <!-- Actions? -->
+                                <div style="padding-top: 32px;">
+                                    <button onclick="deleteRow(event)"><i class="fa-solid fa-x" style="color: #ffffff;"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="formInteractions">
-                    <button type="button">Cancelar</button>
-                    <button type="submit">Enviar</button>
+                <div class="row justify-content-center align-items-center my-3">
+                    <div class="col-5">
+                        <div id="formInteractions">
+                            <button type="submit">Enviar</button>
+                            <button type="button">Cancelar</button>
+                        </div>
+                    </div>
                 </div>
+                
             </form>
         </section>
     
         <section id="secPredicciones">
             <div>
-                <h3>PREDICCIONES</h3>
+                <h1>PREDICCIONES</h1>
                 <div>
                     <table>
                         <colgroup>
@@ -107,6 +148,9 @@
             </div>
         </section>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 </body>
 <script>
     const form = document.getElementById('dengueCasesPredictionForm')
@@ -158,8 +202,8 @@
                         </div>
                     </div>
                     <!-- Actions? -->
-                    <div>
-                        <button type="button" onclick="deleteRow(event)">X</button>
+                    <div style="padding-top: 32px;">
+                        <button type="button" onclick="deleteRow(event)"><i class="fa-solid fa-x" style="color: #ffffff;"></i></button>
                     </div>
         `
     
