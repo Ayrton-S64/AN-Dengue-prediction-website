@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/weather-cases.css">
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <script src="https://kit.fontawesome.com/f2d5daf803.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 <body>
     <div class="header">
@@ -864,13 +866,33 @@
                         </div>
                     </div>
                 </div>
-                <div id="formInteractions" style="padding-bottom: 40px;;">
+                <div id="formInteractions" style="padding-bottom: 40px;">
                     <button type="button">Cancelar</button>
                     <button type="submit">Enviar</button>
                 </div>
             </form>
         </section>
     </div>
+   <!-- Modal -->
+   <div class="modal" id="miModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Encabezado del modal -->
+        <div class="modal-header">
+          <h5 class="modal-title">Respuesta</h5>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Cuerpo del modal -->
+        <div class="modal-body">
+          <!-- Aquí se mostrarán las respuestas -->
+        </div>
+        <!-- Pie del modal (opcional) -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 <script>
     const form = document.getElementById('form_symptoms')
@@ -889,7 +911,47 @@
                 // Handle the response data
                 console.log('respuesta API: ', response);
                 // alert(response.prediction); // aqui se muestra el modal
-                // showResponses(fechas, response.predictions);
+                        // Obtener el modal y sus elementos
+                const modal = document.querySelector("#miModal");
+                const modalContent = modal.querySelector(".modal-body");
+
+                let contentHTML = "<p>Respuestas:</p>";
+                for (const key in response.prediction[0]) {
+                if (response.prediction[0].hasOwnProperty(key)) {
+                    contentHTML += `<p>${key}: ${response.prediction[0][key]}</p>`;
+                }
+                }
+                modalContent.innerHTML = contentHTML;
+
+                const canvas = document.createElement("canvas");
+                canvas.width = 400;
+                canvas.height = 200;
+                modalContent.appendChild(canvas);
+
+                const ctx = canvas.getContext("2d");
+                new Chart(ctx, {
+                type: "bar", 
+                data: {
+                    labels: Object.keys(response.prediction[0]), // Etiquetas para el eje X
+                    datasets: [
+                    {
+                        label: "Probabilidad",
+                        data: Object.values(response.prediction[0]), // Datos para el gráfico
+                        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)", "rgba(255, 206, 86, 0.2)"],
+                        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)", "rgba(255, 206, 86, 1)"],
+                        borderWidth: 1
+                    }
+                    ]
+                },
+                options: {
+                    scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                    }
+                }
+                });
+                $(modal).modal('show');
             })
             .catch(error => {
                 // Handle any errors
