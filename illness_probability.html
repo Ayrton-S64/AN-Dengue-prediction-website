@@ -944,7 +944,7 @@
                 const chartData = Object.values(response.prediction[0]).map(value => (value*100).toFixed(2));
                 
                 const chartContainer = modalContent.querySelector(".chart-container");
-                chartContainer.innerHTML = "";
+                chartContainer.removeChild(chartContainer.firstChild);
                 const canvas = document.createElement("canvas");
                 chartContainer.appendChild(canvas);
                 const ctx = canvas.getContext("2d");
