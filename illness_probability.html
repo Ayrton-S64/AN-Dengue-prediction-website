@@ -870,7 +870,7 @@
                     </div>
                 </div>
                 <div id="formInteractions" style="padding-bottom: 40px;">
-                    <button type="button">Cancelar</button>
+                    <button onclick="redirectIndex();" type="button">Cancelar</button>
                     <button type="submit">Enviar</button>
                 </div>
             </form>
@@ -911,6 +911,10 @@
 <script>
     const form = document.getElementById('form_symptoms')
 
+    function redirectIndex(){
+        window.location.href = "index.html";
+    }
+
     function handleFormSubmit(ev){
         ev.preventDefault();
         const formData = new FormData(form);
@@ -940,6 +944,7 @@
                 const chartData = Object.values(response.prediction[0]).map(value => (value*100).toFixed(2));
                 
                 const chartContainer = modalContent.querySelector(".chart-container");
+                chartContainer.innerHTML = "";
                 const canvas = document.createElement("canvas");
                 chartContainer.appendChild(canvas);
                 const ctx = canvas.getContext("2d");
