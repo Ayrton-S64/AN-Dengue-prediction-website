@@ -305,8 +305,10 @@
     }
 
     function showResponses(fechas, respuesta){
-        const secPredicciones =  document.querySelector('#secPredicciones')
-        const tblBody = document.querySelector('#tbodyPredicciones')
+        const secPredicciones =  document.querySelector('#secPredicciones');
+        const tblBody = document.querySelector('#tbodyPredicciones');
+
+        tblBody.innerHTML = "";
 
         for(let i = 0; i<fechas.length; i++){
             let fecha = fechas[i];
