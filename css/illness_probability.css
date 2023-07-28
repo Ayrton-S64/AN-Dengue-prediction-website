@@ -22,7 +22,7 @@
     flex-direction: row;
     align-items: center;
   }
-  
+
   /* Estilo para las celdas de la tabla */
   .table td, .table th {
     padding: 0.3rem 0.5rem; /* Ajusta el padding (espaciado interno) según tus necesidades */
