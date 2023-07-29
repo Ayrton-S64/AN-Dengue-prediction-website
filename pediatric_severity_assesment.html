@@ -93,7 +93,7 @@
                             <div class="col-3">
                                         <!-- Duración de la fiebre? -->
                                         <div class="">
-                                            <label for="">Duración de la fiebre</label>
+                                            <label for="">Duración de la fiebre(Días)</label>
                                             <div>
                                                 <input required class="form-control" name="duracion_fiebre" type="number">
                                             </div>
@@ -102,7 +102,7 @@
                             <div class="col-3">
                                      <!-- Hemoglobina -->
                                 <div class="">
-                                    <label for="">Hemoglobina</label>
+                                    <label for="">Hemoglobina(13-17)</label>
                                     <div>
                                         <input required class="form-control" name="hemoglobina" type="number">
                                     </div>
@@ -113,7 +113,7 @@
                             <div class="col-3">
                                  <!-- Hematocritos -->
                                 <div class="">
-                                    <label for="">Hematocritos</label>
+                                    <label for="">Hematocrito </label>
                                     <div>
                                         <input required class="form-control" name="hematocritos" type="number">
                                     </div>
@@ -314,7 +314,8 @@
             .then(response => {
                 // Handle the response data
                 console.log('respuesta API: ', response);
-                alert(response.prediction);
+                // alert(response.prediction);
+                showModal(response.prediction);
                 // showResponses(fechas, response.predictions);
             })
             .catch(error => {
@@ -365,6 +366,61 @@
             tblBody.append(n_row);
         }
     }
+    function showModal(prediction) {
+    // Define el contenido de la ventana modal
+    let modalContent;
+    $('#myModal').remove();
+    if (prediction === "Dengue sin complicaciones") {
+        // Contenido de la ventana modal si prediction es "Dengue sin complicaciones"
+
+        modalContent = `
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">Respuesta</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row justify-content-center align-items-center">
+                                <img style="width: 100%; height: 100%;" src="recursos/img/warning.png" alt="" />
+                                <h5>${prediction}</h5>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    } else {
+        // Contenido de la ventana modal para cualquier otro valor de prediction
+        modalContent = `
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalTitle">Respuesta</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row justify-content-center align-items-center">
+                                <img style="width: 100%; height: 100%;" src="recursos/img/alert.png"" alt="" />
+                                <h5>${prediction}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    // Agrega el contenido a la página
+    $('body').append(modalContent);
+
+    // Muestra la ventana modal
+    $('#myModal').modal('show');
+}
+
     
     form.onsubmit=handleFormSubmit
 </script>
